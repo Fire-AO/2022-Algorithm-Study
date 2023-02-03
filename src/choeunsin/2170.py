@@ -1,12 +1,12 @@
 #선 긋기
 import sys
 
-N = int(input()) #선을 그은 횟수
+N = int(input())     #선을 그은 횟수
 data = [list(map(int, sys.stdin.readline().split())) for _ in range(N)] #선의 시작점, 끝점
 
-data.sort()     #시작점 순서대로 정렬
+data.sort()          #시작점 순서대로 정렬
 
-line = data[0]  #그은 선의 시작점, 끝점은 첫번째 배열로
+line = data[0]      #그은 선의 시작점, 끝점은 첫번째 배열로
 count = line[1] - line[0]   #그은 선의 길이는 첫번째 배열의 길이로
 
 for i in range(1, N):
