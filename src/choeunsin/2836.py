@@ -7,13 +7,13 @@ import sys
 N, M = map(int, sys.stdin.readline().split())   #손님의 수와 상근의 최종 목적지 거리 입력받기
 data = [list(map(int, sys.stdin.readline().split())) for _ in range(N)] #승객들의 출발지/도착지 입력받기
 
-go_back = []    #반대 방향으로 가는 승객들을 저장할 배열
+go_back = []        #반대 방향으로 가는 승객들을 저장할 배열
 
 for i in range(N):
     if data[i][0] > data[i][1]:
         go_back.append([data[i][1], data[i][0]])    #반대방향으로 가는 승객들을 출발지/도착지를 반대로 해서 정방향으로 저장
 
-go_back.sort()  #출발지를 기준 오름차순 정렬
+go_back.sort()      #출발지를 기준 오름차순 정렬
 
 #2170의 선긋기와 동일한 go_back의 중복 제거 거리 구하기
 line = go_back[0]
